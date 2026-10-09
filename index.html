@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartQuiz | 8085 Quiz Buzzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="trophy">🏆</span><div><h1>SmartQuiz</h1><p>8085 Microprocessor Quiz Buzzer</p></div></div>
+    <div class="tagline">THINK FAST · BUZZ FIRST ⚡</div>
+  </header>
+
+  <main class="page">
+    <section class="main-panel">
+      <div class="question-card">
+        <div class="question-count" id="questionCount">Question 1 / 5</div>
+        <h2 id="questionText">Which language is mainly used to structure a web page?</h2>
+        <div class="answers" id="answers"></div>
+        <div id="feedback" class="feedback" aria-live="polite">Press Start Round, then buzz in!</div>
+      </div>
+
+      <div class="buzzer-row">
+        <article class="team team-a">
+          <div class="team-label">TEAM A</div>
+          <button class="buzzer" id="buzzA" aria-label="Team A buzzer"><span>BUZZ!</span></button>
+          <p id="statusA">Ready to play</p>
+        </article>
+        <div class="timer-box"><div class="timer-icon">⏱</div><div id="timer">--</div><span>ROUND STATUS</span><strong id="roundStatus">NOT STARTED</strong></div>
+        <article class="team team-b">
+          <div class="team-label">TEAM B</div>
+          <button class="buzzer" id="buzzB" aria-label="Team B buzzer"><span>BUZZ!</span></button>
+          <p id="statusB">Ready to play</p>
+        </article>
+      </div>
+
+      <div class="controls">
+        <button class="btn start" id="startBtn">▶ Start Round</button>
+        <button class="btn" id="resetBtn">↻ Reset Round</button>
+        <button class="btn next" id="nextBtn">Next Question →</button>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <section class="score-card">
+        <h2>🏆 Scoreboard</h2>
+        <div class="score-line"><span><i class="dot blue"></i> Team A</span><b id="scoreA">0</b></div>
+        <div class="score-line"><span><i class="dot pink"></i> Team B</span><b id="scoreB">0</b></div>
+      </section>
+      <section class="rules-card">
+        <h2>How to Play</h2>
+        <ol>
+          <li>Click <b>Start Round</b>.</li>
+          <li>The first team to press BUZZ locks the round.</li>
+          <li>Choose an answer for the winning team.</li>
+          <li>Correct answer earns 10 points.</li>
+          <li>Click Next Question to continue.</li>
+        </ol>
+      </section>
+      <section class="concept-card">
+        <h2>8085 Concepts</h2>
+        <p>✓ Input / Output ports</p><p>✓ Register and accumulator</p><p>✓ Compare and conditional jump</p><p>✓ Polling and program control</p>
+      </section>
+    </aside>
+  </main>
+  <footer>College Mini Project · Web UI is a simulation of the buzzer logic; assembly program is tested separately in GNUSim8085.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
